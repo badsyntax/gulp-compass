@@ -21,8 +21,6 @@ module.exports = function(opt){
                     'and in your system PATH for this task to work. '));
             }
             // excute callback
-            file.path = gutil.replaceExtension(file.path, '.css');
-            file.contents = new Buffer(fs.readFileSync(String(gutil.replaceExtension(path, '.css'))));
             cb(null, file);
         });
     }
